@@ -12,7 +12,7 @@ export class DropdownDirective {
   //   this.open = !this.open;
   // }
 
-  @HostListener('document:mousedown', ['$event'])
+  @HostListener('document:click', ['$event'])
   toggleOpen(event: Event) {
     this.open = this.elementRef.nativeElement.contains(event.target) ? !this.open : false;
   }
