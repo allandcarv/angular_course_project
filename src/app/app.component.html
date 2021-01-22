@@ -2,8 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="view === 'recipes'"></app-recipes>
-      <app-shopping-list *ngIf="view === 'shoppingList'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
