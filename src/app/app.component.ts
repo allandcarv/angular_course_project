@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  public view = 'recipes';
-
-  handleNavigation(view: string): void {
-    this.view = view;
-  }
-}
+export class AppComponent {}
