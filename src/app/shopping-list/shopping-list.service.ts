@@ -21,10 +21,15 @@ export class ShoppingListService {
   addIngredients(ingredients: Ingredient[]): void {
     this.ingredients.push(...ingredients);
 
-    this.ingredientsChanged.next(this.ingredients);
+    this.ingredientsChanged.next(this.ingredients.slice());
   }
 
   getIngredient(index: number) {
     return this.ingredients[index];
+  }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
+    this.ingredientsChanged.next(this.ingredients.slice());
   }
 }
