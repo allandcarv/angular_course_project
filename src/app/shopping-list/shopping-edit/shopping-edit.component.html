@@ -16,7 +16,8 @@
           <button type="submit" class="btn btn-success" style="margin-right: 5px;" [disabled]="f.invalid">
             {{ editMode ? 'Update' : 'Add'}}
           </button>
-          <button type="button" class="btn btn-danger" style="margin-right: 5px;">Delete</button>
+          <button type="button" class="btn btn-danger" style="margin-right: 5px;" (click)="onDelete()"
+            *ngIf="editMode">Delete</button>
           <button type="button" class="btn btn-primary" (click)="onClear()">Clear</button>
         </div>
       </div>
