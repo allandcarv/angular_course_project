@@ -23,4 +23,8 @@ export class ShoppingListService {
 
     this.ingredientsChanged.next(this.ingredients);
   }
+
+  getIngredient(index: number) {
+    return this.ingredients[index];
+  }
 }
