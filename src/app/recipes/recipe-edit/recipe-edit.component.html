@@ -56,7 +56,8 @@
       <hr>
       <div class="row">
         <div class="col-xs-12">
-          <button type="button" class="btn btn-success" (click)="onAddIngredient()">Add Ingredient</button>
+          <button type="button" class="btn btn-success" (click)="onAddIngredient()" [disabled]="recipeForm.invalid">Add
+            Ingredient</button>
         </div>
       </div>
     </form>
